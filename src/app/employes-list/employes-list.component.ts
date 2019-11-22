@@ -9,10 +9,12 @@ import { EmployesService} from '../employes.service';
 })
 export class EmployesListComponent implements OnInit {
   lesEmployes :Employe[];
+
   constructor(private employesService:EmployesService) { }
 
   ngOnInit() {
     this.lesEmployes = this.employesService.employes;
+   
   }
 
 }

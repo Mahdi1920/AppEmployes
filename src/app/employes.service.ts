@@ -7,7 +7,8 @@ import { Employe } from './Employe';
   providedIn: 'root'
 })
 export class EmployesService {
-  [x: string]: any;
+  //[x: string]: any;
+  empl:Employe[];
   employes = [     
     new Employe(12345, 'Mounir Ben Ali', 'Directeur', true),
     new Employe(12587,'Maha Ben Nasr', 'Ingénieur', false),
@@ -17,9 +18,14 @@ export class EmployesService {
   getEmployeByMatricule(m:number):Employe
   {
     for(let e of this.employes)
-      if(e._matricule===m)
+      if(e.matricule===m)
         return e ;
   }
+  /*()
+  {
+    const emp=new Employe(14789,'Ahmed Ben Salah','Sous Directeur',true);
+    this.employes.push(emp);
+  }*/
   constructor() { }
   
     
