@@ -1,0 +1,11 @@
+<h2>Details de l'Employe</h2>
+    <ul class="list-group">
+        <ng-container  *ngFor="let d of employe">
+            <li class="list-group-item" >{{d.matricule}} {{d.nom}} {{d.fonction}} 
+                <input type="checkbox" [checked]="expert"/>Expert
+                
+            </li>
+        </ng-container>
+    </ul>
+    <button [routerLink]="['/employesList']"> Retour</button> 
+
